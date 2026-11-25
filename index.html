@@ -50,34 +50,50 @@
                 <div class="col-lg-6">
                     <div class="booking-form">
                         <h3 class="mb-4" style="font-weight: 700;">Быстрое бронирование</h3>
-                        <div class="mb-3">
-                            <label class="form-label-custom">Место получения</label>
-                            <input type="text" class="form-control-custom" placeholder="Москва, аэропорт Шереметьево">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label-custom">Дата начала</label>
-                                <input type="date" class="form-control-custom">
+                        <form id="bookingForm" action="#" method="POST">
+                            <div class="mb-3">
+                                <label class="form-label-custom" for="location">Место получения</label>
+                                <input type="text" id="location" name="location" class="form-control-custom"
+                                    placeholder="Москва, аэропорт Шереметьево" required minlength="3"
+                                    title="Укажите место получения (минимум 3 символа)">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label-custom">Дата окончания</label>
-                                <input type="date" class="form-control-custom">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom" for="startDate">Дата начала</label>
+                                    <input type="date" id="startDate" name="startDate" class="form-control-custom" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom" for="endDate">Дата окончания</label>
+                                    <input type="date" id="endDate" name="endDate" class="form-control-custom" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label-custom">Класс автомобиля</label>
-                            <select class="form-control-custom">
-                                <option>Любой</option>
-                                <option>Эконом</option>
-                                <option>Комфорт</option>
-                                <option>Бизнес</option>
-                                <option>Премиум</option>
-                                <option>Внедорожник</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary-custom w-100">
-                            Найти автомобиль <i class="bi bi-search ms-2"></i>
-                        </button>
+                            <div class="mb-3">
+                                <label class="form-label-custom" for="carClass">Класс автомобиля</label>
+                                <select id="carClass" name="carClass" class="form-control-custom" required>
+                                    <option value="">Выберите класс</option>
+                                    <option value="economy">Эконом</option>
+                                    <option value="comfort">Комфорт</option>
+                                    <option value="business">Бизнес</option>
+                                    <option value="premium">Премиум</option>
+                                    <option value="suv">Внедорожник</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label-custom" for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control-custom"
+                                    placeholder="example@mail.ru" required
+                                    title="Введите корректный email (например, example@mail.ru)">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label-custom" for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" class="form-control-custom"
+                                    placeholder="+7 (999) 123-45-67" required
+                                    pattern="^\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" title="Формат: +7 (999) 123-45-67">
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                Найти автомобиль <i class="bi bi-search ms-2"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

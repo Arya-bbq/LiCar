@@ -35,3 +35,26 @@ document.querySelectorAll('.btn-primary-custom').forEach(btn => {
         }
     });
 });
+
+//установка минимальной даты (сегодня) для полей дат
+const today = new Date().toISOString().split('T')[0];
+const startDateInput = document.getElementById('startDate');
+const endDateInput = document.getElementById('endDate');
+
+if (startDateInput) {
+    startDateInput.setAttribute('min', today);
+}
+
+if (endDateInput) {
+    endDateInput.setAttribute('min', today);
+}
+
+//при изменении даты начала обновляется минимальная дата окончания.
+if (startDateInput && endDateInput) {
+    startDateInput.addEventListener('change', function() {
+        endDateInput.setAttribute('min', this.value);
+        if (endDateInput.value && endDateInput.value < this.value) {
+            endDateInput.value = this.value;
+        }
+    });
+}
