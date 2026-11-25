@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiCar — Аренда автомобилей</title>
+    
+    <!-- Подключение внешних стилей -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">LiCar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#features">Преимущества</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#how">Как это работает</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacts">Контакты</a></li>
+                </ul>
+                <a href="#booking" class="btn btn-primary-custom">Забронировать</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="booking">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="hero-title">
+                        Аренда авто <span>без границ</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        От эконом-класса до премиум — выбери свой автомобиль и отправляйся в путь уже сегодня.
+                    </p>
+                    <a href="#catalog" class="btn btn-primary-custom btn-lg">
+                        Смотреть каталог <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="booking-form">
+                        <h3 class="mb-4" style="font-weight: 700;">Быстрое бронирование</h3>
+                        <div class="mb-3">
+                            <label class="form-label-custom">Место получения</label>
+                            <input type="text" class="form-control-custom" placeholder="Москва, аэропорт Шереметьево">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label-custom">Дата начала</label>
+                                <input type="date" class="form-control-custom">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label-custom">Дата окончания</label>
+                                <input type="date" class="form-control-custom">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label-custom">Класс автомобиля</label>
+                            <select class="form-control-custom">
+                                <option>Любой</option>
+                                <option>Эконом</option>
+                                <option>Комфорт</option>
+                                <option>Бизнес</option>
+                                <option>Премиум</option>
+                                <option>Внедорожник</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary-custom w-100">
+                            Найти автомобиль <i class="bi bi-search ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="py-5" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Наш <span>автопарк</span></h2>
+            <div class="row g-4">
+                <!-- Карточка 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-car-front-fill"></i>
+                            <span class="car-badge">Эконом</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">Kia Rio</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-fuel-pump-fill"></i>Бензин</span> •
+                                <span><i class="bi bi-people-fill"></i>5 мест</span>
+                            </div>
+                            <div class="car-price">2 500 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-car-front-fill"></i>
+                            <span class="car-badge">Комфорт</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">Toyota Camry</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-fuel-pump-fill"></i>Бензин</span> •
+                                <span><i class="bi bi-people-fill"></i>5 мест</span>
+                            </div>
+                            <div class="car-price">4 500 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-car-front-fill"></i>
+                            <span class="car-badge">Бизнес</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">BMW 5 Series</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-fuel-pump-fill"></i>Бензин</span> •
+                                <span><i class="bi bi-people-fill"></i>5 мест</span>
+                            </div>
+                            <div class="car-price">8 000 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-car-front-fill"></i>
+                            <span class="car-badge">Премиум</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">Mercedes S-Class</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-fuel-pump-fill"></i>Бензин</span> •
+                                <span><i class="bi bi-people-fill"></i>5 мест</span>
+                            </div>
+                            <div class="car-price">15 000 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-truck"></i>
+                            <span class="car-badge">Внедорожник</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">Toyota Land Cruiser</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-fuel-pump-fill"></i>Дизель</span> •
+                                <span><i class="bi bi-people-fill"></i>7 мест</span>
+                            </div>
+                            <div class="car-price">12 000 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <i class="bi bi-ev-front-fill"></i>
+                            <span class="car-badge">Электро</span>
+                        </div>
+                        <div class="car-body">
+                            <h3 class="car-title">Tesla Model 3</h3>
+                            <div class="car-specs">
+                                <span><i class="bi bi-gear-fill"></i>Автомат</span> •
+                                <span><i class="bi bi-lightning-charge-fill"></i>Электро</span> •
+                                <span><i class="bi bi-people-fill"></i>5 мест</span>
+                            </div>
+                            <div class="car-price">10 000 ₽ <small>/ сутки</small></div>
+                            <button class="btn btn-primary-custom w-100">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <h2 class="section-title">Почему <span>выбирают нас</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="feature-title">Полная страховка</h3>
+                        <p class="feature-text">Все автомобили застрахованы по КАСКО и ОСАГО</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h3 class="feature-title">24/7 поддержка</h3>
+                        <p class="feature-text">Мы на связи круглосуточно, без выходных</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Подача везде</h3>
+                        <p class="feature-text">Доставим авто в аэропорт, отель или по адресу</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-credit-card-fill"></i>
+                        </div>
+                        <h3 class="feature-title">Без залога</h3>
+                        <p class="feature-text">Оплата картой или наличными, без депозита</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="py-5" id="how">
+        <div class="container">
+            <h2 class="section-title">Как <span>это работает</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number mx-auto">1</div>
+                        <h3 style="font-weight: 700; margin-bottom: 10px;">Выбери авто</h3>
+                        <p style="color: var(--color-text-muted);">Выбери автомобиль из каталога и укажи даты аренды</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number mx-auto">2</div>
+                        <h3 style="font-weight: 700; margin-bottom: 10px;">Оформи заявку</h3>
+                        <p style="color: var(--color-text-muted);">Заполни короткую форму и получи подтверждение за 5 минут</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="step-number mx-auto">3</div>
+                        <h3 style="font-weight: 700; margin-bottom: 10px;">Получи ключи</h3>
+                        <p style="color: var(--color-text-muted);">Забирай авто в офисе или мы доставим его в любую точку</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="logo mb-3">НОРО</div>
+                    <p style="color: var(--color-text-muted);">
+                        Надёжная аренда автомобилей всех классов. От эконом до премиум — у нас есть всё.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-vk"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="footer-title">Каталог</h4>
+                    <a href="#" class="footer-link">Эконом</a>
+                    <a href="#" class="footer-link">Комфорт</a>
+                    <a href="#" class="footer-link">Бизнес</a>
+                    <a href="#" class="footer-link">Премиум</a>
+                    <a href="#" class="footer-link">Внедорожники</a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Компания</h4>
+                    <a href="#" class="footer-link">О нас</a>
+                    <a href="#" class="footer-link">Условия аренды</a>
+                    <a href="#" class="footer-link">Доставка</a>
+                    <a href="#" class="footer-link">Отзывы</a>
+                    <a href="#" class="footer-link">Контакты</a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Контакты</h4>
+                    <p style="color: var(--color-text-muted); margin-bottom: 10px;">
+                        <i class="bi bi-telephone-fill me-2" style="color: var(--color-accent);"></i>
+                        +7 (800) 555-35-35
+                    </p>
+                    <p style="color: var(--color-text-muted); margin-bottom: 10px;">
+                        <i class="bi bi-envelope-fill me-2" style="color: var(--color-accent);"></i>
+                        info@noro.ru
+                    </p>
+                    <p style="color: var(--color-text-muted);">
+                        <i class="bi bi-geo-alt-fill me-2" style="color: var(--color-accent);"></i>
+                        Москва, ул. Автомобильная, 1
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 НОРО. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
